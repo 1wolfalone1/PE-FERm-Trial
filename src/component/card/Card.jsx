@@ -11,6 +11,9 @@ export default function Card({ data }) {
          sx={{
             backgroundColor: "#dde7e4",
             boxShadow: "5px 5px 10px #4d4d4d26",
+            '&:hover': {
+               cursor: "pointer"
+            }
          }}
          onClick={handleClick}
       >
@@ -18,10 +21,10 @@ export default function Card({ data }) {
             <img src={data.avatar} style={{ width: "100%" }} alt="" />
          </Box>
          <Box padding={"1rem"}>
-            <Typography>Name: {data.name}</Typography>
-            <Typography>Age: {data.age}</Typography>
+            <Typography><strong>Name:</strong> {data.name}</Typography>
+            <Typography><strong>Age:</strong> {data.age}</Typography>
             <Tooltip title={data.address}>
-               <Typography noWrap>Address: {data.address}</Typography>
+               <Typography noWrap><strong>Address:</strong> {data.address}</Typography>
             </Tooltip>
          </Box>
       </Box>
